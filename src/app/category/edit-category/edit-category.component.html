@@ -1,0 +1,12 @@
+<div class="form-group row p-5">
+    <form [formGroup]="categoryGroup" (ngSubmit)="onSubmit()">
+        <label for="first-name">Product Name: </label>
+        <input id="first-name" type="text" class="form-control" formControlName="name">
+        <div *ngIf="name?.invalid && (name?.dirty || name?.touched)" class="alert alert-danger">
+            <div *ngIf="name?.errors?.['required']">
+                category name is required.
+            </div>
+        </div>
+        
+    </form>
+</div>

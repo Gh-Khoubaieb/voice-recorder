@@ -1,0 +1,239 @@
+<div class=" pt-0">
+    <div class="form-group example-container ">
+        <h6 class="form-title">Form</h6>
+        <form [formGroup]="productGroup" (ngSubmit)="onSubmit()">
+    
+            <mat-form-field class="example-full-width" appearance="outline">
+                <mat-label>Outline form field</mat-label>
+                <input matInput placeholder="Placeholder">
+                <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>               
+            </mat-form-field>    
+            <mat-form-field class="example-full-width" appearance="outline">
+                <mat-label>Product Name:</mat-label>
+                <input matInput placeholder="Product Name" formControlName="productName">
+                <mat-error *ngIf="productName?.invalid && (productName?.dirty || productName?.touched)">
+                    product name is required.
+                </mat-error>
+            </mat-form-field>
+    
+            <div class="d-flex justify-content-between">
+                <mat-form-field class="example-full-width me-2" appearance="outline">
+                    <mat-label>Outline form field</mat-label>
+                    <input matInput placeholder="Placeholder">
+                    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>               
+                </mat-form-field>    
+                <mat-form-field class="example-full-width ms-2" appearance="outline">
+                    <mat-label>Product Name:</mat-label>
+                    <input matInput placeholder="Product Name" >
+                   
+                </mat-form-field>
+            </div>
+            <div class="d-flex justify-content-between">
+                <mat-form-field class="example-full-width me-2" appearance="outline">
+                    <mat-label>Outline form field</mat-label>
+                    <input matInput placeholder="Placeholder">
+                    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>               
+                </mat-form-field>    
+                <mat-form-field class="example-full-width ms-2 me-2" appearance="outline">
+                    <mat-label>Product Name:</mat-label>
+                    <input matInput placeholder="Product Name" >
+                   
+                </mat-form-field>
+                <mat-form-field class="example-full-width ms-2" appearance="outline">
+                    <mat-label>Product Name:</mat-label>
+                    <input matInput placeholder="Product Name" >
+                   
+                </mat-form-field>
+            </div>
+            <div class="d-flex justify-content-between">
+                <mat-form-field class="example-full-width me-2" appearance="outline">
+                    <mat-label>Outline form field</mat-label>
+                    <input matInput placeholder="Placeholder">
+                    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>               
+                </mat-form-field>    
+                <mat-form-field class="example-full-width ms-2 me-2" appearance="outline">
+                    <mat-label>Product Name:</mat-label>
+                    <input matInput placeholder="Product Name" >
+                   
+                </mat-form-field>
+                <mat-form-field class="example-full-width ms-2 me-2" appearance="outline">
+                    <mat-label>Product Name:</mat-label>
+                    <input matInput placeholder="Product Name" >
+                   
+                </mat-form-field>
+                <mat-form-field class="example-full-width ms-2 me-2" appearance="outline">
+                    <mat-label>Product Name:</mat-label>
+                    <input matInput placeholder="Product Name" >
+                   
+                </mat-form-field>
+                <mat-form-field class="example-full-width ms-2 me-2" appearance="outline">
+                    <mat-label>Product Name:</mat-label>
+                    <input matInput placeholder="Product Name" >
+                   
+                </mat-form-field>
+              
+               
+                <mat-form-field class="example-full-width ms-2" appearance="outline">
+                    <mat-label>Product Name:</mat-label>
+                    <input matInput placeholder="Product Name" >
+                   
+                </mat-form-field>
+            </div>
+            <mat-form-field class="example-full-width " appearance="outline">
+                <mat-label>Price</mat-label>
+                <input matInput placeholder="Price" formControlName="price">
+                <mat-error *ngIf="price?.errors?.['required']">
+                    price is required.
+                </mat-error>
+            </mat-form-field>
+    
+            <div class="d-flex">
+                <mat-form-field appearance="outline">
+                    <mat-label>Category:</mat-label>
+                    <mat-select matNativeControl formControlName="category">
+                        <mat-option *ngFor="let cat of categories" [value]="cat?.id">{{cat?.name}}</mat-option>
+                    </mat-select>
+                    <mat-error *ngIf="category?.errors?.['required']"> category is required.</mat-error>
+                </mat-form-field>
+                <a class="btn btn-primary ps-4 ms-4 btn-add" (click)="openDialog() ">Add</a>
+            </div>
+            <!-----------start test enum-->
+            <div class="d-flex">
+                <mat-form-field appearance="outline">
+                    <mat-label>Type:</mat-label>
+                    <mat-select matNativeControl formControlName="type">
+                        <mat-option *ngFor="let type of TypeProduct" [value]="type.value">
+                         {{type.viewValue}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <!-----------end test enum-->
+
+            
+            <div class="d-flex">
+                <input [(ngModel)]="isChecked1"   type="checkbox" class="example-margin" formControlName="isVisible">
+                    <label for="">is Visible 1</label>
+                
+            </div>
+           
+           <div  *ngIf="isChecked1 === true " class="all-check">
+            <div class="d-flex">
+                <input  type="checkbox" class="example-margin" formControlName="isVisible" checked="false">
+                    <label for="">is 1</label>
+                
+            </div>
+            <div class="d-flex">
+                <input   type="checkbox" class="example-margin" formControlName="isVisible" checked="false">
+                    <label for="">is 2</label>
+                
+            </div>
+           </div>
+           <!------------------------>
+           <div class="d-flex">
+            <input [(ngModel)]="isChecked2"   type="checkbox" class="example-margin" formControlName="isVisible">
+                <label for="">is Visible 2</label>
+            
+        </div>
+       
+       <div  *ngIf="isChecked2 === true " class="all-check">
+        <div class="d-flex">
+            <input  type="checkbox" class="example-margin" formControlName="isVisible" checked="false">
+                <label for="">is 1</label>
+            
+        </div>
+        <div class="d-flex">
+            <input   type="checkbox" class="example-margin" formControlName="isVisible" checked="false">
+                <label for="">is 2</label>
+            
+        </div>
+       </div>
+           <!------------------------>
+           <div class="d-flex">
+            <input [(ngModel)]="isChecked3"   type="checkbox" class="example-margin" formControlName="isVisible">
+                <label for="">is Visible 3</label>
+            
+        </div>
+       
+       <div  *ngIf="isChecked3 === true " class="all-check">
+        <div class="d-flex">
+            <input  type="checkbox" class="example-margin" formControlName="isVisible" checked="false">
+                <label for="">is 1</label>
+            
+        </div>
+        <div class="d-flex">
+            <input   type="checkbox" class="example-margin" formControlName="isVisible" checked="false">
+                <label for="">is 2</label>
+            
+        </div>
+       </div>
+    <!----------------------->
+    <div class="d-flex">
+        <input [(ngModel)]="isChecked4"   type="checkbox" class="example-margin" formControlName="isVisible">
+            <label for="">is Visible 3</label>
+        
+    </div>
+   
+   <div  *ngIf="isChecked4 === true " class="all-check">
+    <div class="d-flex">
+        <input  type="checkbox" class="example-margin" formControlName="isVisible" checked="false">
+            <label for="">is 1</label>
+        
+    </div>
+    <div class="d-flex">
+        <input   type="checkbox" class="example-margin" formControlName="isVisible" checked="false">
+            <label for="">is 2</label>
+        
+    </div>
+    
+   </div>
+
+            <input type="submit" value="Save changes" class="btn-save mt-2">
+            <input type="submit" (click)="onNoClick()" value="Annuler" class="btn-save mt-2">
+        </form>
+        <!----------------------->
+
+<form action="/action_page.php">
+  
+      <input  type="radio" id="html" name="fav_language1" value="HTML">
+      <label for="html">is Visible 1</label><br>
+    <!--------------------->
+    <div class="all-check">
+    <input type="radio" id="html" name="fav_language11" value="HTML">
+    <label for="html">is  1</label><br>
+    <!--****-->
+    <input type="radio" id="html" name="fav_language12" value="HTML">
+    <label for="html">is  2</label><br>
+    <!-------------------->
+  </div>
+  
+    <input type="radio" id="css" name="fav_language2" value="CSS">
+    <label for="css">is Visible 2</label><br>
+    <!--------------------->
+    <div class="all-check">
+      <input type="radio" id="html" name="fav_language21" value="HTML">
+      <label for="html">is  1</label><br>
+      <!--****-->
+      <input type="radio" id="html" name="fav_language22" value="HTML">
+      <label for="html">is  2</label><br>
+      <!-------------------->
+    </div>
+    <!-------------------->
+    <input type="radio" id="javascript" name="fav_language3" value="JavaScript">
+    <label for="javascript">is Visible 3</label>
+    <!--------------------->
+    <div class="all-check">
+      <input type="radio" id="html" name="fav_language31" value="HTML">
+      <label for="html">is  1</label><br>
+      <!--****-->
+      <input type="radio" id="html" name="fav_language32" value="HTML">
+      <label for="html">is  2</label><br>
+      <!-------------------->
+    </div>
+    <!-------------------->
+   
+    </form>
+    <!-------------------------------->
+    </div>
+
+</div>

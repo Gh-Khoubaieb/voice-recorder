@@ -1,0 +1,114 @@
+<!-- <div class=" pt-0">
+    <div class="form-group example-container ">
+        <h6 class="form-title">Form</h6>
+        <form [formGroup]="productGroup" (ngSubmit)="onSubmit()">
+    
+            <mat-form-field class="example-full-width" appearance="outline">
+                <mat-label>Outline form field</mat-label>
+                <input matInput placeholder="Placeholder">
+                <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>               
+            </mat-form-field>    
+            <mat-form-field class="example-full-width" appearance="outline">
+                <mat-label>Product Name:</mat-label>
+                <input matInput placeholder="Product Name" formControlName="productName">
+                <mat-error *ngIf="productName?.invalid && (productName?.dirty || productName?.touched)">
+                    product name is required.
+                </mat-error>
+            </mat-form-field>
+    
+            <div class="d-flex justify-content-between">
+                <mat-form-field class="example-full-width me-2" appearance="outline">
+                    <mat-label>Outline form field</mat-label>
+                    <input matInput placeholder="Placeholder">
+                    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>               
+                </mat-form-field>    
+                <mat-form-field class="example-full-width ms-2" appearance="outline">
+                    <mat-label>Product Name:</mat-label>
+                    <input matInput placeholder="Product Name" >
+                   
+                </mat-form-field>
+            </div>
+            <div class="d-flex justify-content-between">
+                <mat-form-field class="example-full-width me-2" appearance="outline">
+                    <mat-label>Outline form field</mat-label>
+                    <input matInput placeholder="Placeholder">
+                    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>               
+                </mat-form-field>    
+                <mat-form-field class="example-full-width ms-2 me-2" appearance="outline">
+                    <mat-label>Product Name:</mat-label>
+                    <input matInput placeholder="Product Name" >
+                   
+                </mat-form-field>
+                <mat-form-field class="example-full-width ms-2" appearance="outline">
+                    <mat-label>Product Name:</mat-label>
+                    <input matInput placeholder="Product Name" >
+                   
+                </mat-form-field>
+            </div>
+            <div class="d-flex justify-content-between">
+                <mat-form-field class="example-full-width me-2" appearance="outline">
+                    <mat-label>Outline form field</mat-label>
+                    <input matInput placeholder="Placeholder">
+                    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>               
+                </mat-form-field>    
+                <mat-form-field class="example-full-width ms-2 me-2" appearance="outline">
+                    <mat-label>Product Name:</mat-label>
+                    <input matInput placeholder="Product Name" >
+                   
+                </mat-form-field>
+                <mat-form-field class="example-full-width ms-2 me-2" appearance="outline">
+                    <mat-label>Product Name:</mat-label>
+                    <input matInput placeholder="Product Name" >
+                   
+                </mat-form-field>
+                <mat-form-field class="example-full-width ms-2 me-2" appearance="outline">
+                    <mat-label>Product Name:</mat-label>
+                    <input matInput placeholder="Product Name" >
+                   
+                </mat-form-field>
+                <mat-form-field class="example-full-width ms-2 me-2" appearance="outline">
+                    <mat-label>Product Name:</mat-label>
+                    <input matInput placeholder="Product Name" >
+                   
+                </mat-form-field>
+              
+               
+                <mat-form-field class="example-full-width ms-2" appearance="outline">
+                    <mat-label>Product Name:</mat-label>
+                    <input matInput placeholder="Product Name" >
+                   
+                </mat-form-field>
+            </div>
+            <mat-form-field class="example-full-width " appearance="outline">
+                <mat-label>Price</mat-label>
+                <input matInput placeholder="Price" formControlName="price">
+                <mat-error *ngIf="price?.errors?.['required']">
+                    price is required.
+                </mat-error>
+            </mat-form-field>
+    
+            <div class="d-flex">
+                <mat-form-field appearance="outline">
+                    <mat-label>Category:</mat-label>
+                    <mat-select matNativeControl formControlName="category">
+                        <mat-option *ngFor="let cat of categories" [value]="cat?.id">{{cat?.name}}</mat-option>
+                    </mat-select>
+                    <mat-error *ngIf="category?.errors?.['required']"> category is required.</mat-error>
+                </mat-form-field>
+                <a class="btn btn-primary ps-4 ms-4 btn-add" (click)="openDialog() ">Add</a>
+            </div>
+            
+            <div class="d-flex">
+                <mat-checkbox class="example-margin" formControlName="isVisible">
+                    is Visible
+                </mat-checkbox>
+            </div>
+    
+            <input type="submit"  value="Save changes" class="btn-save mt-2 mr-5">
+            <input (click)="onNoClick()" value="Annuler" class="btn-save mt-2 ">
+            
+        </form>
+    </div>
+
+</div> -->
+<app-add-product></app-add-product>

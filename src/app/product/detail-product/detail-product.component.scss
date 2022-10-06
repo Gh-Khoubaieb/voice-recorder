@@ -1,0 +1,14 @@
+:host{
+    height: 100%;
+}
+.example-container {
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    color: rgba(0, 0, 0, 0.87);
+    transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    overflow: hidden;
+    border-radius: 6px;
+    box-shadow: rgb(50 50 93 / 2%) 0px 2px 5px -1px, rgb(0 0 0 / 5%) 0px 1px 3px -1px;
+    background-image: none;
+    margin-bottom: 24px;
+  }

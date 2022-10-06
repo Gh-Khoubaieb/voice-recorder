@@ -1,0 +1,1 @@
+export {EnumProduct} from './product'
